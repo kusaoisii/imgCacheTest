@@ -11,8 +11,6 @@ export default {
 		msg: String
 	},
 	mounted () {
-		console.log('cordova.file')
-		console.log(cordova.file.dataDirectory)
 	}
 }
 </script>

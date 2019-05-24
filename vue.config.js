@@ -19,8 +19,6 @@ const API_STAGE = process.env.API_STAGE
 const API_ENDPOINT = process.env.API_ENDPOINT
 const LOCAL_STORAGE_KEY = process.env.LOCAL_STORAGE_KEY
 const TIME_STAMP = md5(new Date().getTime())
-const INIT_LANGUAGE = process.env.INIT_LANGUAGE
-const FACE_IMAGE_SIZE = process.env.FACE_IMAGE_SIZE
 
 /**
  * 開発時のサーバ設定
@@ -205,8 +203,6 @@ module.exports = {
  			'API_ENDPOINT': `"${API_ENDPOINT}"`,
  			'LOCAL_STORAGE_KEY': `"${LOCAL_STORAGE_KEY}"`,
  			'TIME_STAMP': `"${TIME_STAMP}"`,
- 			'INIT_LANGUAGE': `"${INIT_LANGUAGE}"`,
- 			'FACE_IMAGE_SIZE': `"${FACE_IMAGE_SIZE}"`,
  		}
 		config
 			.plugin('define')
