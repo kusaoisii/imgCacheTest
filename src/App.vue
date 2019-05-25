@@ -5,6 +5,7 @@
 			<router-link to="/about">About</router-link>
 		</div>
 		<router-view/>
+		<img alt="Vue logo" src="https://d1sz9tkli0lfjq.cloudfront.net/items/443O3Q073V1W0L3T1d1X/piggy_bank.png" id = "profile">
 	</div>
 </template>
 
@@ -15,7 +16,18 @@ export default {
 	name: 'App',
 	mixins: [
 		FileUtil
-	]
+	],
+	mounted () {
+		alert('test start')
+		this.initImageCache()
+		const target = document.querySelector('img#profile')
+		console.log(target.getAttribute('src'))
+		const self = this
+		setTimeout(function	() {
+			alert('test')
+			self.setImageCache(target)
+		}, 3000)
+	}
 }
 </script>
 
